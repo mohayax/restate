@@ -3,8 +3,18 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '@/constants/images'
 import icons from '@/constants/icons'
+import { auth, googleProvider } from '../firebase.config'
+import { signInWithPopup } from 'firebase/auth'
 
 const SignIn = () => {
+
+  const handleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider)
+    } catch (error) {
+      console.error(error)
+    }
+  }
   const handleLogin = () => {}
   return (
     <SafeAreaView className='bg-white h-full'>
@@ -17,7 +27,7 @@ const SignIn = () => {
             <Text className='text-primary-300'>Your Ideal Home</Text>
           </Text>
           <Text className='text-lg font-rubik text-black-200 text-center mt-12'>Login to Restate with Google</Text>
-          <TouchableOpacity className='bg-white shadow-md shadow-zinc-300 rounded-full py-4 mt-5' onPress={handleLogin}>
+          <TouchableOpacity className='bg-white shadow-md shadow-zinc-300 rounded-full py-4 mt-5' onPress={handleSignIn}>
             <View className='flex flex-row items-center justify-center'>
               <Image
               source={icons.google}

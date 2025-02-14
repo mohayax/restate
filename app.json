@@ -8,6 +8,15 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "extra": {
+      "firebaseApiKey": "AIzaSyAY4Z1ejqhQ4a2Csj6ZJLJk2GCWrAQRnZ0",
+      "firebaseAuthDomain": "restate-e7689.firebaseapp.com",
+      "firebaseProjectId": "restate-e7689",
+      "firebaseStorageBucket": "restate-e7689.firebasestorage.app",
+      "firebaseMessagingSenderId": "800773594891",
+      "firebaseAppId": "1:800773594891:web:c6128b6a3cafa8a1628c0e",
+      "firebaseMeasurementId": "G-41V0BLQ0KB"
+    },
     "ios": {
       "supportsTablet": true
     },
